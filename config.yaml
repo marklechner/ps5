@@ -1,0 +1,4 @@
+chrome_driver: /var/tmp/chromedriver
+ps5: https://www.amazon.de/-/en/dp/B08H93ZRK9
+# switch in the script to use this to test the notifier feature
+controller: https://www.amazon.de/-/en/9399506/dp/B08H99BPJN
