@@ -65,7 +65,7 @@ def main():
     chrome_driver = conf['chrome_driver']
     # switch the below lines if you want to test your notification
     # item_url = conf['controller']
-    item_url = conf['controller']
+    item_url = conf['ps5']
     bot = PS5Bot(chrome_driver, item_url)
     bot.check_ps5()
 
