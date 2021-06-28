@@ -45,9 +45,9 @@ class PS5Bot():
         while True:
             stock  = self.driver.find_element_by_xpath('//*[@id="availability"]/span').text
             if stock == "In stock.":
-                logger.warning("PS5 in stock on Amazon.de, go and buy: {}".format(ps5))
+                logger.warning("PS5 in stock on Amazon.de, go and buy: {}".format(self.item_url))
                 notify("PS5 Status Report", "PS5 IN STOCK!!!")
-            if stock == "Currently unavailable.":
+            elif stock == "Currently unavailable.":
                 logger.info("PS5 status: {} :(".format(stock))
             else:
                 logger.error("Script misconfigured")
@@ -65,7 +65,7 @@ def main():
     chrome_driver = conf['chrome_driver']
     # switch the below lines if you want to test your notification
     # item_url = conf['controller']
-    item_url = conf['ps5']
+    item_url = conf['controller']
     bot = PS5Bot(chrome_driver, item_url)
     bot.check_ps5()
 
